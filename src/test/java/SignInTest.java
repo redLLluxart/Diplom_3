@@ -14,7 +14,7 @@ public class SignInTest extends TestTemplate {
         userClient.create(user);
 
         Boolean actual = new MainPage(driver)
-                .clickSingInCentralBtn()
+                .clickSignInCentralBtn()
                 .signInUser(user.getEmail(),user.getPassword())
                 .clickPersonalAccountBtnWithAuthorizedUser()
                 .isAccountTextDisplayed();

@@ -43,7 +43,7 @@ public class MainPage {
         return new ProfilePage(driver);
     }
 
-    public LoginPage clickSingInCentralBtn() {
+    public LoginPage clickSignInCentralBtn() {
         driver.findElement(singInMainPageBtn).click();
         return new LoginPage(driver);
     }

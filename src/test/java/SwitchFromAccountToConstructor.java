@@ -24,7 +24,7 @@ public class SwitchFromAccountToConstructor extends TestTemplate {
         userClient.create(user);
 
         Boolean actual = new MainPage(driver)
-                .clickSingInCentralBtn()
+                .clickSignInCentralBtn()
                 .signInUser(user.getEmail(),user.getPassword())
                 .clickPersonalAccountBtnWithAuthorizedUser()
                 .isAccountTextDisplayed();
@@ -38,7 +38,7 @@ public class SwitchFromAccountToConstructor extends TestTemplate {
     @Description("Проверка, что открывается раздел Конструктор, когда пользователь не авторизован")
     public void goFromProfilePageWithoutAuthTest() {
         Boolean actual = new MainPage(driver)
-                .clickSingInCentralBtn()
+                .clickSignInCentralBtn()
                 .clickConstructorBtn()
                 .isBunsIsDisplayed();
 
@@ -52,7 +52,7 @@ public class SwitchFromAccountToConstructor extends TestTemplate {
         userClient.create(user);
 
         Boolean actual = new MainPage(driver)
-                .clickSingInCentralBtn()
+                .clickSignInCentralBtn()
                 .signInUser(user.getEmail(),user.getPassword())
                 .clickPersonalAccountBtnWithAuthorizedUser()
                 .clickConstructorBtn()
@@ -68,7 +68,7 @@ public class SwitchFromAccountToConstructor extends TestTemplate {
         userClient.create(user);
 
         Boolean actual = new MainPage(driver)
-                .clickSingInCentralBtn()
+                .clickSignInCentralBtn()
                 .signInUser(user.getEmail(),user.getPassword())
                 .clickPersonalAccountBtnWithAuthorizedUser()
                 .clickLogoBtn()

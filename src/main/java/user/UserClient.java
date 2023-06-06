@@ -10,7 +10,7 @@ import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_ACCEPTED;
 import static org.hamcrest.Matchers.is;
 
-public class UserClient extends Endpoints {
+public class UserClient{
     @Step("Send post request to api/auth/login")
     public ValidatableResponse login(User user) {
         return given()
@@ -40,7 +40,7 @@ public class UserClient extends Endpoints {
                 .and()
                 .body(user)
                 .when()
-                .post(CREATE_USER_API)
+                .post(Endpoints.CREATE_USER_API)
                 .then();
     }
 }

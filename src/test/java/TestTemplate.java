@@ -28,7 +28,6 @@ public class TestTemplate {
 
     @After
     public void teardown() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.quit();
         if (user != null) {
             ValidatableResponse responseLogin = userClient.login(user);
